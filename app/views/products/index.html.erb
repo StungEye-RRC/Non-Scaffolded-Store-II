@@ -1,0 +1,9 @@
+<h2>All Products</h2>
+
+<p>Products table size: <%= @products.size %></p>
+
+<ul>
+  <% @products.each do |product| %>
+    <li><%= product.name %> - <%= number_to_currency product.price %></li>
+  <% end %>
+</ul>
