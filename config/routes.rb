@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   # load the index action of the products controller.
   get 'products' => 'products#index'
   # ^Verb  ^URL       ^Controller ^action
+  
+  root to: 'products#index'
 end
