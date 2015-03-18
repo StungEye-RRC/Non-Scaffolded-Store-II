@@ -4,6 +4,15 @@
 
 <ul>
   <% @products.each do |product| %>
-    <li><%= product.name %> - <%= number_to_currency product.price %></li>
+    <!--
+    We shouldn't manually generate a href tags... 
+    <li><a href="/products/<%= product.id %>"><%= product.name %></a></li>
+    Nor do we need to be a specific as this:
+    <li><%= link_to product.name, product_path(id: product.id) %></li>
+    The following link_to shortcut will do...
+    -->
+    <li><%= link_to product.name, product %></li>
   <% end %>
 </ul>
+
+<p><%= link_to 'New Product', new_product_path %></p>
