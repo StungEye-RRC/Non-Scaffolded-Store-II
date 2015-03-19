@@ -1,12 +1,8 @@
-<h2><%= @product.name %></h2>
+<%= render @product %>
 
-<div><%= @product.description %></div>
-
-<p><strong>Price:</strong> <%= number_to_currency @product.price %></p>
-
-<p>
-  <%= link_to 'Edit This Product', edit_product_path(@product) %> -
-  <%= link_to 'Delete This Product', @product, method: 'delete' %>
-</p>
+<!--
+The above line is the short-cut for what follows:
+<%= render partial: 'product', object: @product %>
+->
 
 <p><%= link_to 'Home', root_path %></p>

@@ -1,0 +1,12 @@
+<div class="product">
+  <h2><%= link_to product.name, product %></h2>
+  
+  <p><strong>Price:</strong> <%= number_to_currency product.price %></p>
+  
+  <div><%= product.description %></div>
+  
+  <p>
+    <%= link_to 'Edit This Product', edit_product_path(product) %> -
+    <%= link_to 'Delete This Product', product, method: 'delete' %>
+  </p>
+</div>

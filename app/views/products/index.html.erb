@@ -2,17 +2,11 @@
 
 <p>Products table size: <%= @products.size %></p>
 
-<ul>
-  <% @products.each do |product| %>
-    <!--
-    We shouldn't manually generate a href tags... 
-    <li><a href="/products/<%= product.id %>"><%= product.name %></a></li>
-    Nor do we need to be a specific as this:
-    <li><%= link_to product.name, product_path(id: product.id) %></li>
-    The following link_to shortcut will do...
-    -->
-    <li><%= link_to product.name, product %></li>
-  <% end %>
-</ul>
+<%= render @products %>
+
+<!--
+The above is a short-cut for the long form version:
+<%= render partial: 'product', collection: @products %>
+-->
 
 <p><%= link_to 'New Product', new_product_path %></p>
