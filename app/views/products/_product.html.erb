@@ -5,6 +5,10 @@
   
   <div><%= product.description %></div>
   
+  <% if product.image_filename.present? %>
+    <p><%= image_tag product.image_filename, width: 300 %></p>
+  <% end %>
+  
   <p>
     <%= link_to 'Edit This Product', edit_product_path(product) %> -
     <%= link_to 'Delete This Product', product, method: 'delete' %>
