@@ -18,17 +18,17 @@ Rails.application.routes.draw do
   # CREATING
   
   # A Route to display a new product form.
-  get 'products/new' => 'products#new', as: 'new_product'
-  post 'products' => 'products#create', as: 'create_product'
+  #get 'products/new' => 'products#new', as: 'new_product'
+  #post 'products' => 'products#create', as: 'create_product'
   
   # UPDATING
   
-  get 'products/:id/edit' => 'products#edit', as: 'edit_product',  id: /\d+/ 
-  patch 'products/:id' => 'products#update',   id: /\d+/ 
+  #get 'products/:id/edit' => 'products#edit', as: 'edit_product',  id: /\d+/ 
+  #patch 'products/:id' => 'products#update',   id: /\d+/ 
   
   # DELETING
   
-  delete 'products/:id' => 'products#destroy', as: 'delete_product', id: /\d+/ 
+  #delete 'products/:id' => 'products#destroy', as: 'delete_product', id: /\d+/ 
   
   # A Route to handle the data posted by our new product form.
   
